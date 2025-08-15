@@ -163,9 +163,7 @@ devops-core-case/
 │ └── prometheus-stack/
 │
 └── README.md
-,,,
-
-
+```
 ---
 
 ## 🖼 Architecture
