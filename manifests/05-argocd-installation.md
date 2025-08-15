@@ -54,7 +54,7 @@ kubectl -n argocd create secret tls argocd-tls \
 ### 4. ArgoCD için Ingress Oluşturulması
 
 argocd-ingress.yaml
-```bash
+```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:

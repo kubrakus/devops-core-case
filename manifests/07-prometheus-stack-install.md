@@ -24,7 +24,6 @@ Bu yaklaşım, versiyon kontrol, tekrarlanabilir kurulum ve merkezi yönetim ava
 
 ---
 
-
 #### Repo Yapısı
 ```plaintext
 prometheus-stack-repo/
@@ -54,6 +53,8 @@ prometheus-stack/ → Helm chart values.yaml dosyası ve kurulum parametreleri.
 alerts/ → 3 adet kritik alert kuralı (Node, Pod, API Server).
 
 monitoring-ingress/ → Prometheus, Grafana ve Alertmanager’a erişim için Ingress tanımı.
+
+---
 
 ### 2. Kurulum Adımları
 
@@ -114,7 +115,8 @@ labels:
     release: prometheus-stack
 ```
 
-![kubik-alerts](image.png)
+![kubik-alerts](./img/image-5.png)
 
 📌 İlgili Repository:
 https://github.com/kubrakus/prometheus-stack-repo
+
