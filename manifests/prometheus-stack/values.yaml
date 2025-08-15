@@ -1,0 +1,32 @@
+grafana:
+  adminUser: admin
+  adminPassword: admin123
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - grafana.kubikolog.com
+    path: /
+    pathType: Prefix
+  service:
+    type: ClusterIP
+
+prometheus:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - prometheus.kubikolog.com
+    path: /
+    pathType: Prefix
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+
+alertmanager:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - alertmanager.kubikolog.com
+    path: /
+    pathType: Prefix

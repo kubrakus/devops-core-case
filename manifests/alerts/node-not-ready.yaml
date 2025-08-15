@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: node-not-ready
+  namespace: monitoring
+  labels:
+    release: prometheus-stack
+spec:
+  groups:
+    - name: node.rules
+      rules:
+        - alert: KubikAlert-NodeNotReady
+          expr: kube_node_status_condition{condition="Ready", status="true"} == 0
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Node not ready for more than 1 minute"
+            description: "Node {{ $labels.node }} has been in NotReady state for at least 1 minute."

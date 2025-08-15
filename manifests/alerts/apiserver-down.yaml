@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: apiserver-down
+  namespace: monitoring
+  labels:
+    release: prometheus-stack
+spec:
+  groups:
+    - name: apiserver.rules
+      rules:
+        - alert: KubikAlert-APIServerDown
+          expr: absent(up{job="apiserver"} == 1)
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Kubernetes API Server down for more than 1 minute"
+            description: "The API server has been unreachable for more than 1 minute."

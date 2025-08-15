@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/kubrakus/prometheus-stack-repo.git
+    targetRevision: main
+    path: app-of-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy: {}
+#    automated:
+#      prune: true
+#      selfHeal: true
