@@ -106,6 +106,6 @@ Oluşturduğumuz ingress bilgisi ile erişim sağlamak için local bilgisayarın
 
 Artık tarayıcıda şu şekilde erişebiliriz.
 
-`https://argocd.kubikolog.com:32726``
+`https://argocd.kubikolog.com:32726`
 
 ![argocd-ui](.././img/image-7.png)
