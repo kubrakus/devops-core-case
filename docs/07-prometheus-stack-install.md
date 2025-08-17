@@ -80,13 +80,16 @@ bileşenleri otomatik kuruldu.
 3 adet kritik alert kuralı ayrı dosyalar halinde oluşturuldu:
 
 **Node Not Ready →** 1 dakika boyunca node NotReady durumunda kalırsa tetiklenir.
+
 Dosya: `alerts/node-not-ready.yaml`
 
 **Pod Alerts →** Tüm pod’lar için genel sağlık kontrolleri.
 Örneğin CrashLoopBackOff veya Pending durumları 1 dakikadan uzun sürerse alarm verir.
+
 Dosya: `alerts/pod-alerts.yaml`
 
 **API Server Down →** Kube API server erişilemezse 1 dakika içinde alarm verir.
+
 Dosya: `alerts/apiserver-down.yaml`
 
 ***Adım 4 — İzleme Servislerine Erişim***
