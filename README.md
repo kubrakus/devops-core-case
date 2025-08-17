@@ -4,8 +4,6 @@ Bu repository, **DevOps Core Case** çalışmasının uygulama ve dokümantasyon
 
 Case iki ana bölümden oluşmaktadır:
 
- bölümden oluşmaktadır:
-
 1. **Kubernetes Cluster + Monitoring & Alerting (Prometheus Stack) + ArgoCD GitOps yapısı**
 2. **Kafka Cluster Taşıma Stratejisi (Zero Downtime)**
 
