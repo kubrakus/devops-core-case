@@ -17,8 +17,7 @@ Case iki ana bölümden oluşmaktadır:
   - [4. Ingress Controller Kurulumu](#4-ingress-controller-kurulumu)
   - [5. ArgoCD Kurulumu](#5-argocd-kurulumu)
   - [6. App-of-Apps Yapısı](#6-app-of-apps-yapısı)
-  - [7. Prometheus Stack Kurulumu](#7-prometheus-stack-kurulumu)
-  - [8. Alert Kuralları](#8-alert-kuralları)
+  - [7. Prometheus Stack Kurulumu ve Alert Tanımları](#7-prometheus-stack-kurulumu)
 - [Bölüm 2 – Kafka Taşıma Stratejisi](#-bölüm-2--kafka-taşıma-stratejisi)
 - [📂 Repository Yapısı](#-repository-yapısı)
 
@@ -84,16 +83,16 @@ Case iki ana bölümden oluşmaktadır:
 
 ---
 
-### 7. Prometheus Stack Kurulumu
+### 7. Prometheus Stack Kurulumu ve Alert Tanımlamaları
+
+#### 7.1 Prometheus Stack Kurulumu
 - `kube-prometheus-stack` Helm chart ile ArgoCD üzerinden kuruldu.
 - `values.yaml` içinde gereksiz bileşenler devre dışı bırakıldı.
 - Grafana, Prometheus ve Alertmanager için ingress tanımlandı.
 
 📄 Detaylar: [docs/07-prometheus-stack-install.md](docs/07-prometheus-stack-install.md)
 
----
-
-### 8. Alert Kuralları
+#### 7.2  Alert Kuralları
 - **Node Not Ready** (1 dk içinde ulaşılmazsa)
 - **Pod Alerts** (CrashLoopBackOff, ImagePullBackOff vb. tüm failed pod durumları)
 - **API Server Down** (1 dk erişilemezse)
@@ -117,7 +116,7 @@ Case’in ikinci bölümünde, mevcut bir Kafka cluster’ının **downtime olma
    - Metadata uyumu sağlanır.
 
 2. **Veri Senkronizasyonu**
-   - `MirrorMaker 2` veya `Kafka Connect` ile **real-time replikasyon** başlatılır.
+   - `MirrorMaker 2` ile **real-time replikasyon** başlatılır.
    - Topic offset’leri kontrol edilir.
 
 3. **Trafik Yönlendirme**
@@ -138,6 +137,10 @@ Case’in ikinci bölümünde, mevcut bir Kafka cluster’ının **downtime olma
 
 ---
 
+## 🖼 Architecture
+![Architecture](img/image-12.png)
+
+---
 ## 📂 Repository Yapısı
 
 ```plaintext
@@ -162,7 +165,3 @@ devops-core-case/
 │
 └── README.md
 ```
----
-
-## 🖼 Architecture
-![Architecture](docs/images/architecture.png)

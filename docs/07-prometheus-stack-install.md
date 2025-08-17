@@ -115,7 +115,7 @@ labels:
     release: prometheus-stack
 ```
 
-![kubik-alerts](./img/image-5.png)
+![kubik-alerts](.././img/image-10.png)
 
 📌 İlgili Repository:
 https://github.com/kubrakus/prometheus-stack-repo
