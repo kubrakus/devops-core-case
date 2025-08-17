@@ -47,7 +47,7 @@ kubectl get pods -n ingress-nginx
 kubectl get svc -n ingress-nginx
 ````
 
-![ingresscontroller-status](./img/image-3.png)
+![ingresscontroller-status](.././img/image-3.png)
 
 ### 4. LoadBalancer’dan NodePort’a Geçiş
 
@@ -63,5 +63,5 @@ Açılan YAML’da:
 
 Kaydettikten sonra tekrar kontrol ederek nodeport bilgisini öğrenebiliriz.
 
-![nodeport](./img/image-4.png)
+![nodeport](.././img/image-4.png)
 

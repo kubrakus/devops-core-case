@@ -15,7 +15,7 @@ Kurulumun ardından pod’ların durumunu kontrol edelim:
 kubectl get pods -n argocd
 ````
 
-![argocdpods](./img/image.png)
+![argocdpods](.././img/image-5.png)
 
 ### 2. ArgoCD Admin Şifresinin Alınması
 Kurulum sonrası ArgoCD’nin admin kullanıcısı için başlangıç şifresi secret üzerinden çekildi.
@@ -92,7 +92,7 @@ Kontrol:
 ```bash
 kubectl get ingress -n argocd
 ```
-![argocdingress](./img/image-1.png)
+![argocdingress](.././img/image-6.png)
 
 **Not:** ingressClassName: nginx alanı belirtilerek Ingress kaynağının doğrudan ingress-nginx controller tarafından yönetilmesi sağlanmıştır.
 
@@ -108,4 +108,4 @@ Artık tarayıcıda şu şekilde erişebiliriz.
 
 `https://argocd.kubikolog.com:32726``
 
-![argocd-ui](./img/image-2.png)
+![argocd-ui](.././img/image-7.png)

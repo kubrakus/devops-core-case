@@ -30,4 +30,4 @@ Master node üzerinde aşağıdaki komut ile yeni worker node'un geldiğini doğ
  ```bash 
 kubectl get nodes
 ````
-![kubectlgetnodes](./img/image-2.png)
+![kubectlgetnodes](.././img/image-2.png)

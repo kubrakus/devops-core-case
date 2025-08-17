@@ -33,6 +33,6 @@ kubectl apply -f parent-app.yaml
 
 Arayüze login olup application'ın ve applicationın kontrolündeki diğer applicationların kurulduğunu teyit edebiliriz.
 
-![app-of-app](./img/image-4.png)
+![app-of-app](.././img/image-9.png)
 
-![argocd-apps](./img/image-3.png)
+![argocd-apps](.././img/image-8.png)

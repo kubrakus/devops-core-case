@@ -46,6 +46,6 @@ cilium status
 kubectl get pods -n kube-system
 ```
 
-![cilium-status](./img/image.png)
+![cilium-status](.././img/image.png)
 
-![cilium-pod-status](./img/image-1.png)
+![cilium-pod-status](.././img/image-1.png)
